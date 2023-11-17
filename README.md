@@ -1,6 +1,6 @@
 # 🧑‍🍳 Capstone Project - 05 - OpenAI API Introduction
 
-In this repository, we're providing a beginner-friendly exploration of the OpenAI API and best practices for LLM prompting engineering.
+This repository provides a beginner-friendly exploration of the OpenAI API and how to create the first version of a Conversational Interface (chatbot) using OpenAI API.
 
 ## What's required
 
@@ -20,8 +20,9 @@ Create a file named .env within the root folder of this project. Inside this fil
 
 ```text
 OPENAI_API_KEY=sk-xiuFidWeFMx4NyxL6...
-
 ```
+
+> Note: Ensure that the variable in the `.env` file is named `OPENAI_API_KEY`, as demonstrated in the code above. This specific name aligns with the `Settings` class in the `util.py` file, which is a specialization of the `BaseSettings` from the `pydantic-settings` package.
 
 After this, you need to activate it and install the packages listed in requirements.txt. Here are the steps:
 
