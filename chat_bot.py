@@ -70,8 +70,12 @@ class ChatBotGPT:
     Generate a response by using LLMs.
     """
 
-    def __init__(self):
+    def __init__(self, engine):
         self.memory = []
+
+        self.engine = engine
 
     def generate_response(self, message: str):
         return self.engine.get_completion(prompt=message)
+
+

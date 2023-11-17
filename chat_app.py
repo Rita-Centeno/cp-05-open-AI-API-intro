@@ -10,7 +10,7 @@ import time
 import streamlit as st
 
 from chat_bot import ChatBotStatic, ChatBotRandom, ChatBotGPT
-from util import local_settings
+from util import GPT_Helper, local_settings
 
 
 # [i]                                                                                            #
@@ -22,10 +22,11 @@ def initialize() -> None:
     Initialize the app
     """
 
-    st.sidebar.title("Simple chat (v3)")
+    st.sidebar.title("🤖 Simple chat (v3)")
 
     if "chatbot" not in st.session_state:
-        st.session_state.chatbot = ChatBotGPT()
+        gpt = GPT_Helper(OPENAI_API_KEY=local_settings.OPENAI_API_KEY)
+        st.session_state.chatbot = ChatBotGPT(engine=gpt)
 
     with st.sidebar:
         # st.selectbox("ChatBots" , options=["ChatBotStatic", "ChatBotRandom", "ChatBotGPT"])
