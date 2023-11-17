@@ -74,4 +74,4 @@ class ChatBotGPT:
         self.memory = []
 
     def generate_response(self, message: str):
-        return "Sorry, I need to be programmed 👨🏻‍💻"
+        return self.engine.get_completion(prompt=message)
